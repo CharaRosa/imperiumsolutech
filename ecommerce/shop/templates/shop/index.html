@@ -2,6 +2,7 @@
 
 
 {% block content %}
+<!-- pour la barre de recherche-->
 <div class="row">
     <div class="col-md-12">
         <form class="card card-sm">
@@ -15,5 +16,21 @@
             </div>
         </form>
     </div>
+</div>
+<!--Pour afficher les produits -->
+<div class="row">
+    {% for product in product_object %}
+    <div class="col-md-3">
+        <div class="card">
+            <img src="{{ product.image }}" alt="" class="card-img-top" style="width:250px; height:250px;"  >
+            <div class="card-body">
+                <div id="aa{{ product.id }}" class="card-title">{{ product.title }}</div>
+                <div id="price{{ product.id }}" style="color:orange" class="card-text"> {{ product.price }} CFA</div>
+                <a href="{{ product.id }}" class="btn btn-warning">Voir</a>
+                <button id="{{ product.id }}" class="btn ted btn-primary">Ajouter</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}
