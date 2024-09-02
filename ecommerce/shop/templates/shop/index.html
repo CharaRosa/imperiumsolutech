@@ -1,0 +1,19 @@
+{% extends "shop/base.html" %}
+
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <form class="card card-sm">
+            <div class="card-body row no-gutters align-items-center">
+                <div class="col">
+                    <input type="search" placeholder="Entrez le nom du produit que vous cherchez" name="item-name" class="form-control form-control-borderless">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary">Recherche</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
